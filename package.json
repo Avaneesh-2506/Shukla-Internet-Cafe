@@ -1,0 +1,12 @@
+{
+  "name": "shukla-internet-cafe-website",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Static website for Shukla Internet Cafe with Indian-market focused services and WhatsApp integration.",
+  "scripts": {
+    "start": "npx serve ."
+  },
+  "devDependencies": {
+    "serve": "^14.2.6"
+  }
+}
