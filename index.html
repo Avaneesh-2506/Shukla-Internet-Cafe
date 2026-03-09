@@ -31,9 +31,9 @@
             />
           </div>
           <div class="brand-text">
-            <div class="brand-name">Shukla Internet Cafe</div>
-            <div class="brand-location">Sahson, Prayagraj</div>
-            <div class="brand-tagline">All Online & Govt Services</div>
+            <div class="brand-name" data-i18n="brand_name">Shukla Internet Cafe</div>
+            <div class="brand-location" data-i18n="brand_location">Sahson, Prayagraj</div>
+            <div class="brand-tagline" data-i18n="brand_tagline">All Online &amp; Govt Services</div>
           </div>
         </div>
         <button class="nav-toggle" type="button" aria-label="Toggle navigation" data-nav-toggle>
@@ -41,16 +41,25 @@
           <span></span>
         </button>
         <nav class="site-nav">
-          <a href="#services">Services</a>
-          <a href="#location">Location</a>
-          <a href="#contact">Contact</a>
+          <button
+            type="button"
+            class="lang-toggle"
+            data-lang-toggle
+            aria-label="Toggle language Hindi / English"
+          >
+            <span data-lang-label>EN</span>
+          </button>
+          <a href="#services" data-i18n="nav_services">Services</a>
+          <a href="#about" data-i18n="nav_about">About</a>
+          <a href="#location" data-i18n="nav_location">Location</a>
+          <a href="#contact" data-i18n="nav_contact">Contact</a>
           <a
             href="https://wa.me/919454065068?text=Hi%20Shukla%20Internet%20Cafe%2C%20I%20want%20to%20know%20about%20your%20services."
             target="_blank"
             rel="noopener"
             class="btn btn-sm btn-whatsapp"
           >
-            WhatsApp Us
+            <span data-i18n="nav_whatsapp">WhatsApp Us</span>
           </a>
         </nav>
       </div>
@@ -60,8 +69,8 @@
       <section id="hero" class="hero">
         <div class="container hero-inner">
           <div class="hero-copy">
-            <h1>Your Trusted Digital <br>Service Center</h1>
-            <p>
+            <h1 data-i18n="hero_title">Your Trusted Digital <br />Service Center</h1>
+            <p data-i18n="hero_body">
               From fresh PAN and correction forms to income, caste, domicile certificates,
               ration card work and all types of online forms &amp; internet cafe services –
               everything under one roof at <strong>Shukla Internet Cafe</strong>.
@@ -73,25 +82,37 @@
                 rel="noopener"
                 class="btn btn-primary"
               >
-                Chat on WhatsApp
+                <span data-i18n="hero_primary_cta">Chat on WhatsApp</span>
               </a>
-              <a href="#services" class="btn btn-outline">View Services</a>
+              <a href="#services" class="btn btn-outline" data-i18n="hero_secondary_cta">
+                View Services
+              </a>
             </div>
             <ul class="hero-highlights">
-              <li>Guidance for all Government &amp; Online forms</li>
-              <li>Quick processing with proper documentation</li>
-              <li>Friendly support in Hindi &amp; English</li>
+              <li data-i18n="hero_point_1">Guidance for all Government &amp; Online forms</li>
+              <li data-i18n="hero_point_2">Quick processing with proper documentation</li>
+              <li data-i18n="hero_point_3">Friendly support in Hindi &amp; English</li>
             </ul>
           </div>
           <div class="hero-panel">
             <div class="hero-card">
-              <h2>Popular Services Today</h2>
+              <h2 class="section-title" data-i18n="hero_services_title">Popular Services Today</h2>
               <ul class="hero-service-list">
-                <li>Fresh PAN Application &amp; PAN Correction</li>
-                <li>Income, Caste &amp; Domicile Certificates</li>
-                <li>Ration Card New / Update / Correction</li>
-                <li>Online Forms – Govt, Education &amp; Others</li>
-                <li>Printing, Scanning, Online Payment Support</li>
+                <li data-i18n="hero_services_item_1">
+                  Fresh PAN Application &amp; PAN Correction
+                </li>
+                <li data-i18n="hero_services_item_2">
+                  Income, Caste &amp; Domicile Certificates
+                </li>
+                <li data-i18n="hero_services_item_3">
+                  Ration Card New / Update / Correction
+                </li>
+                <li data-i18n="hero_services_item_4">
+                  Online Forms – Govt, Education &amp; Others
+                </li>
+                <li data-i18n="hero_services_item_5">
+                  Printing, Scanning, Online Payment Support
+                </li>
               </ul>
             </div>
           </div>
@@ -99,22 +120,22 @@
 
         <div id="services" class="section">
           <div class="container">
-            <h2 class="section-title">Our Services</h2>
-            <p class="section-subtitle">
+            <h2 class="section-title" data-i18n="services_title">Our Services</h2>
+            <p class="section-subtitle" data-i18n="services_subtitle">
               Built for your needs – we handle all common government and online services
               with care so that you do not have to worry about the process.
             </p>
             <div class="services-grid">
               <article class="service-card">
-                <h3>Fresh PAN Application</h3>
-                <p>
+                <h3 data-i18n="service_pan_new_title">Fresh PAN Application</h3>
+                <p data-i18n="service_pan_new_body">
                   New PAN card application with correct information, photo, and signature as per
                   the latest rules.
                 </p>
                 <ul>
-                  <li>Form filling &amp; data entry</li>
-                  <li>Document check &amp; guidance</li>
-                  <li>Online payment support</li>
+                  <li data-i18n="service_pan_new_point_1">Form filling &amp; data entry</li>
+                  <li data-i18n="service_pan_new_point_2">Document check &amp; guidance</li>
+                  <li data-i18n="service_pan_new_point_3">Online payment support</li>
                 </ul>
                 <a
                   href="https://wa.me/919454065068?text=Hi%20Shukla%20Internet%20Cafe%2C%20I%20need%20help%20with%20Fresh%20PAN%20Application."
@@ -122,20 +143,20 @@
                   rel="noopener"
                   class="btn btn-whatsapp btn-full"
                 >
-                  WhatsApp about PAN Application
+                  <span data-i18n="service_pan_new_cta">WhatsApp about PAN Application</span>
                 </a>
               </article>
 
               <article class="service-card">
-                <h3>PAN Correction / Update</h3>
-                <p>
+                <h3 data-i18n="service_pan_correction_title">PAN Correction / Update</h3>
+                <p data-i18n="service_pan_correction_body">
                   Correction of name, date of birth, address and other PAN details with proper
                   proof and tracking.
                 </p>
                 <ul>
-                  <li>Name / DOB / Address correction</li>
-                  <li>Re-issue PAN card</li>
-                  <li>Status tracking assistance</li>
+                  <li data-i18n="service_pan_correction_point_1">Name / DOB / Address correction</li>
+                  <li data-i18n="service_pan_correction_point_2">Re-issue PAN card</li>
+                  <li data-i18n="service_pan_correction_point_3">Status tracking assistance</li>
                 </ul>
                 <a
                   href="https://wa.me/919454065068?text=Hi%20Shukla%20Internet%20Cafe%2C%20I%20need%20help%20with%20PAN%20Correction%20or%20Update."
@@ -143,20 +164,20 @@
                   rel="noopener"
                   class="btn btn-whatsapp btn-full"
                 >
-                  WhatsApp about PAN Correction
+                  <span data-i18n="service_pan_correction_cta">WhatsApp about PAN Correction</span>
                 </a>
               </article>
 
               <article class="service-card">
-                <h3>Govt Certificates</h3>
-                <p>
+                <h3 data-i18n="service_govt_title">Govt Certificates</h3>
+                <p data-i18n="service_govt_body">
                   Online application support for income, caste, domicile and other certificates as
                   per your state portal.
                 </p>
                 <ul>
-                  <li>Income Certificate</li>
-                  <li>Caste Certificate</li>
-                  <li>Domicile / Residence Certificate</li>
+                  <li data-i18n="service_govt_point_1">Income Certificate</li>
+                  <li data-i18n="service_govt_point_2">Caste Certificate</li>
+                  <li data-i18n="service_govt_point_3">Domicile / Residence Certificate</li>
                 </ul>
                 <a
                   href="https://wa.me/919454065068?text=Hi%20Shukla%20Internet%20Cafe%2C%20I%20need%20help%20with%20Government%20Certificates."
@@ -164,20 +185,20 @@
                   rel="noopener"
                   class="btn btn-whatsapp btn-full"
                 >
-                  WhatsApp about Govt Certificates
+                  <span data-i18n="service_govt_cta">WhatsApp about Govt Certificates</span>
                 </a>
               </article>
 
               <article class="service-card">
-                <h3>Ration Card Services</h3>
-                <p>
+                <h3 data-i18n="service_ration_title">Ration Card Services</h3>
+                <p data-i18n="service_ration_body">
                   New ration card, member addition/removal, address change and other related
                   services.
                 </p>
                 <ul>
-                  <li>New ration card application</li>
-                  <li>Update / correction</li>
-                  <li>Online status checking</li>
+                  <li data-i18n="service_ration_point_1">New ration card application</li>
+                  <li data-i18n="service_ration_point_2">Update / correction</li>
+                  <li data-i18n="service_ration_point_3">Online status checking</li>
                 </ul>
                 <a
                   href="https://wa.me/919454065068?text=Hi%20Shukla%20Internet%20Cafe%2C%20I%20need%20help%20with%20Ration%20Card%20services."
@@ -185,20 +206,20 @@
                   rel="noopener"
                   class="btn btn-whatsapp btn-full"
                 >
-                  WhatsApp about Ration Card
+                  <span data-i18n="service_ration_cta">WhatsApp about Ration Card</span>
                 </a>
               </article>
 
               <article class="service-card">
-                <h3>Online Forms &amp; Applications</h3>
-                <p>
+                <h3 data-i18n="service_online_title">Online Forms &amp; Applications</h3>
+                <p data-i18n="service_online_body">
                   Filling and submission of all types of online forms – government, college,
                   scholarship, exam and more.
                 </p>
                 <ul>
-                  <li>Government scheme forms</li>
-                  <li>College / exam registration</li>
-                  <li>Scholarship &amp; application forms</li>
+                  <li data-i18n="service_online_point_1">Government scheme forms</li>
+                  <li data-i18n="service_online_point_2">College / exam registration</li>
+                  <li data-i18n="service_online_point_3">Scholarship &amp; application forms</li>
                 </ul>
                 <a
                   href="https://wa.me/919454065068?text=Hi%20Shukla%20Internet%20Cafe%2C%20I%20need%20help%20with%20Online%20Forms%20and%20Applications."
@@ -206,20 +227,20 @@
                   rel="noopener"
                   class="btn btn-whatsapp btn-full"
                 >
-                  WhatsApp about Online Forms
+                  <span data-i18n="service_online_cta">WhatsApp about Online Forms</span>
                 </a>
               </article>
 
               <article class="service-card">
-                <h3>Other Internet Cafe Services</h3>
-                <p>
+                <h3 data-i18n="service_other_title">Other Internet Cafe Services</h3>
+                <p data-i18n="service_other_body">
                   Standard internet cafe facilities as needed for day-to-day work in the Indian
                   market.
                 </p>
                 <ul>
-                  <li>Print, scan &amp; photocopy</li>
-                  <li>Online payments &amp; ticket booking</li>
-                  <li>Email, resume, and document typing</li>
+                  <li data-i18n="service_other_point_1">Print, scan &amp; photocopy</li>
+                  <li data-i18n="service_other_point_2">Online payments &amp; ticket booking</li>
+                  <li data-i18n="service_other_point_3">Email, resume, and document typing</li>
                 </ul>
                 <a
                   href="https://wa.me/919454065068?text=Hi%20Shukla%20Internet%20Cafe%2C%20I%20want%20to%20know%20about%20your%20other%20internet%20cafe%20services."
@@ -227,9 +248,72 @@
                   rel="noopener"
                   class="btn btn-whatsapp btn-full"
                 >
-                  WhatsApp about Other Services
+                  <span data-i18n="service_other_cta">WhatsApp about Other Services</span>
                 </a>
               </article>
+
+              <article class="service-card">
+                <h3 data-i18n="service_courier_title">Courier Service (DTDC Partner)</h3>
+                <p data-i18n="service_courier_body">
+                  Book domestic and selected international DTDC courier consignments directly from
+                  our counter with proper tracking and receipts.
+                </p>
+                <ul>
+                  <li data-i18n="service_courier_point_1">DTDC parcel booking and tracking help</li>
+                  <li data-i18n="service_courier_point_2">Packing guidance for important documents</li>
+                  <li data-i18n="service_courier_point_3">
+                    Pickup information and delivery status support
+                  </li>
+                </ul>
+                <a
+                  href="https://wa.me/919454065068?text=Hi%20Shukla%20Internet%20Cafe%2C%20I%20want%20to%20send%20a%20courier%20via%20DTDC."
+                  target="_blank"
+                  rel="noopener"
+                  class="btn btn-whatsapp btn-full"
+                >
+                  <span data-i18n="service_courier_cta">WhatsApp about DTDC Courier</span>
+                </a>
+              </article>
+            </div>
+          </div>
+        </div>
+
+        <div id="about" class="section section-alt">
+          <div class="container">
+            <h2 class="section-title" data-i18n="about_title">About Shukla Internet Cafe</h2>
+            <p class="section-subtitle" data-i18n="about_subtitle">
+              Shukla Internet Cafe in Sahson, Prayagraj has been helping students, working
+              professionals and families with reliable online and government related services.
+            </p>
+            <div class="about-grid">
+              <div class="about-block">
+                <h3 data-i18n="about_who_heading">Who We Are</h3>
+                <p data-i18n="about_who_body">
+                  We are a neighbourhood digital service centre focused on making online work easy
+                  for everyone – from PAN and certificates to forms, payments and printing.
+                </p>
+              </div>
+              <div class="about-block">
+                <h3 data-i18n="about_why_heading">Why People Prefer Us</h3>
+                <ul>
+                  <li data-i18n="about_why_point_1">
+                    Clear explanation of documents required for each service
+                  </li>
+                  <li data-i18n="about_why_point_2">
+                    Honest guidance for government and online procedures
+                  </li>
+                  <li data-i18n="about_why_point_3">
+                    WhatsApp support for quick questions and status updates
+                  </li>
+                </ul>
+              </div>
+              <div class="about-block">
+                <h3 data-i18n="about_courier_heading">DTDC Courier Partner</h3>
+                <p data-i18n="about_courier_body">
+                  As a DTDC courier service point, we help you send important documents and parcels
+                  with trusted logistics support, booking receipts and tracking assistance.
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -237,20 +321,20 @@
         <div id="location" class="section section-alt">
           <div class="container location-grid">
             <div class="location-info">
-              <h2 class="section-title">Location &amp; Timings</h2>
-              <p class="section-subtitle">
+              <h2 class="section-title" data-i18n="location_title">Location &amp; Timings</h2>
+              <p class="section-subtitle" data-i18n="location_subtitle">
                 Visit our centre for any offline help, document verification and guidance.
               </p>
               <div class="info-block">
-                <h3>Address</h3>
-                <p>
+                <h3 data-i18n="location_address_heading">Address</h3>
+                <p data-i18n="location_address_body">
                   Shukla Internet Cafe<br />
                   Near Ram Janki Mandir, Sahson, Prayagraj<br />
                   Uttar Pradesh- PIN 221507, India
                 </p>
               </div>
               <div class="info-block">
-                <h3>Contact</h3>
+                <h3 data-i18n="location_contact_heading">Contact</h3>
                 <p>
                   Mobile / WhatsApp:
                   <a href="https://wa.me/919454065068" target="_blank" rel="noopener">
@@ -262,8 +346,8 @@
                 </p>
               </div>
               <div class="info-block">
-                <h3>Opening Hours</h3>
-                <p>
+                <h3 data-i18n="location_hours_heading">Opening Hours</h3>
+                <p data-i18n="location_hours_body">
                   Monday to Saturday: 08:00 AM – 09:00 PM
                 </p>
               </div>
@@ -274,7 +358,7 @@
                   rel="noopener"
                   class="btn btn-outline"
                 >
-                  Open in Google Maps
+                  <span data-i18n="location_open_maps_btn">Open in Google Maps</span>
                 </a>
               </div>
             </div>
@@ -295,7 +379,9 @@
                 rel="noopener"
                 class="map-card map-card-inline"
               >
-                <span class="map-cta">Open full location in Google Maps →</span>
+                <span class="map-cta" data-i18n="location_open_maps_full">
+                  Open full location in Google Maps →
+                </span>
               </a>
             </div>
           </div>
@@ -306,38 +392,39 @@
     <footer id="contact" class="site-footer">
       <div class="container footer-inner">
         <div class="footer-brand">
-          <div class="brand-name">Shukla Internet Cafe</div>
-          <p>
+          <div class="brand-name" data-i18n="footer_brand_name">Shukla Internet Cafe</div>
+          <p data-i18n="footer_brand_body">
             Trusted partner for PAN, government certificates, ration card and all internet cafe
             services in the Indian market.
           </p>
         </div>
         <div class="footer-columns">
           <div class="footer-column">
-            <h3>Quick Links</h3>
+            <h3 data-i18n="footer_quick_links_heading">Quick Links</h3>
             <ul>
-              <li><a href="#services">Our Services</a></li>
-              <li><a href="#location">Location &amp; Timings</a></li>
+              <li><a href="#services" data-i18n="footer_quick_services">Our Services</a></li>
+              <li><a href="#location" data-i18n="footer_quick_location">Location &amp; Timings</a></li>
               <li>
                 <a
                   href="https://wa.me/919454065068?text=Hi%20Shukla%20Internet%20Cafe%2C%20I%20have%20a%20question%20about%20your%20services."
                   target="_blank"
                   rel="noopener"
+                  data-i18n="footer_quick_whatsapp"
                   >WhatsApp Enquiry</a
                 >
               </li>
             </ul>
           </div>
           <div class="footer-column">
-            <h3>Contact</h3>
+            <h3 data-i18n="footer_contact_heading">Contact</h3>
             <ul>
               <li><span>Mobile / WhatsApp:</span> +91-9454065068</li>
               <li><span>Email:</span> shuklacafe2016@gmail.com</li>
             </ul>
           </div>
           <div class="footer-column">
-            <h3>Note</h3>
-            <p>
+            <h3 data-i18n="footer_note_heading">Note</h3>
+            <p data-i18n="footer_note_body">
               All services are provided as per the latest government guidelines. Please carry
               original documents and photocopies where required.
             </p>

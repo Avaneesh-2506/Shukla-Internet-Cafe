@@ -199,6 +199,39 @@ a:hover {
   background: var(--color-text-main);
 }
 
+.lang-toggle {
+  margin-right: 0.5rem;
+  padding: 0.3rem 0.9rem;
+  border-radius: 999px;
+  border: 1px solid rgba(148, 163, 184, 0.7);
+  background: rgba(255, 255, 255, 0.85);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-main);
+  transition: background-color 0.16s ease-out, color 0.16s ease-out, border-color 0.16s ease-out,
+    transform 0.08s ease-out, box-shadow 0.16s ease-out;
+}
+
+.lang-toggle:hover {
+  background: rgba(191, 219, 254, 0.95);
+  border-color: var(--color-primary);
+  box-shadow: 0 10px 24px rgba(148, 163, 184, 0.4);
+  transform: translateY(-1px);
+}
+
+.lang-toggle-active {
+  background: linear-gradient(135deg, var(--color-primary-soft), var(--color-primary-dark));
+  color: #f9fafb;
+  border-color: transparent;
+  box-shadow: 0 14px 32px rgba(14, 165, 233, 0.45);
+}
+
 .btn {
   display: inline-flex;
   align-items: center;
@@ -424,6 +457,34 @@ a:hover {
   align-items: stretch;
 }
 
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+.about-block h3 {
+  margin: 0 0 0.4rem;
+  font-size: 0.98rem;
+}
+
+.about-block p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+}
+
+.about-block ul {
+  margin: 0.25rem 0 0;
+  padding-left: 1.1rem;
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+}
+
+.about-block li {
+  margin-bottom: 0.2rem;
+}
+
 .location-info {
   display: flex;
   flex-direction: column;
@@ -635,6 +696,10 @@ a:hover {
   .location-grid {
     grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
   }
+
+  .about-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 768px) {
@@ -681,6 +746,10 @@ a:hover {
   }
 
   .location-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .about-grid {
     grid-template-columns: minmax(0, 1fr);
   }
 
