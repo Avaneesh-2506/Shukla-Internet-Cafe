@@ -265,12 +265,32 @@ a:hover {
   background: rgba(255, 255, 255, 0.9);
   color: var(--color-text-main);
   border-color: rgba(148, 163, 184, 0.6);
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.btn-outline::before {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+  transition: top 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: -1;
 }
 
 .btn-outline:hover {
-  border-color: var(--color-primary);
-  box-shadow: 0 8px 22px rgba(148, 163, 184, 0.3);
-  transform: translateY(-1px);
+  border-color: var(--color-primary-dark);
+  color: white;
+  box-shadow: 0 10px 25px rgba(14, 165, 233, 0.3);
+  transform: translateY(-2px);
+}
+
+.btn-outline:hover::before {
+  top: 0;
 }
 
 .btn-whatsapp {
@@ -459,8 +479,12 @@ a:hover {
 
 .about-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1.5rem;
+}
+
+.about-block:first-child {
+  grid-column: 1 / -1;
 }
 
 .about-block h3 {
@@ -558,6 +582,7 @@ a:hover {
 .map-card:hover {
   transform: translateY(-2px);
   box-shadow: 0 20px 45px rgba(14, 165, 233, 0.25);
+  text-decoration: none;
 }
 
 .map-card-inline {
@@ -630,6 +655,29 @@ a:hover {
 
 .footer-column a {
   color: #e5e7eb;
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.footer-column a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -0.1rem;
+  width: 0;
+  height: 2px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--color-primary-soft), var(--color-primary));
+  transition: width 0.18s ease-out;
+}
+
+.footer-column a:hover::after {
+  width: 100%;
+}
+
+.footer-column a:hover {
+  text-decoration: none;
 }
 
 .footer-column span {
@@ -678,6 +726,194 @@ a:hover {
 .whatsapp-fab:hover {
   filter: brightness(1.04);
   transform: translateY(-1px);
+}
+
+/* ==========================================================================
+   Contact Form Styles
+   ========================================================================== */
+.contact-card-wrap {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(16px);
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  box-shadow: var(--shadow-soft);
+  overflow: hidden;
+  margin: 1.5rem auto 0;
+  max-width: 720px;
+}
+
+/* Form Styling */
+.contact-card-form {
+  padding: 3rem 2.75rem;
+  position: relative;
+  background: rgba(255, 255, 255, 0.65);
+}
+
+.contact-card-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  height: 100%;
+}
+
+.form-group-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.form-group label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--color-text-muted);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  font-family: inherit;
+  font-size: 0.92rem;
+  padding: 0.7rem 0.95rem;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(148, 163, 184, 0.45);
+  background: rgba(255, 255, 255, 0.85);
+  color: var(--color-text-main);
+  transition: border-color 0.16s ease-out, box-shadow 0.16s ease-out;
+  outline: none;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #94a3b8;
+  opacity: 0.85;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 4px rgba(14, 165, 233, 0.15);
+  background: #ffffff;
+}
+
+.form-group select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23475569' stroke-width='2.5'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M19.5 8.25l-7.5 7.5-7.5-7.5'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.95rem center;
+  background-size: 1rem;
+  padding-right: 2.5rem;
+  cursor: pointer;
+}
+
+.form-group select:invalid {
+  color: #94a3b8;
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+.form-submit-actions {
+  margin-top: 0.5rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.form-submit-btn {
+  min-width: 160px;
+}
+
+/* Success Overlay */
+.form-success-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2.5rem;
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(0.96);
+  transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1), transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 10;
+}
+
+.form-success-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+  transform: scale(1);
+}
+
+.success-content {
+  text-align: center;
+  max-width: 380px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.1rem;
+}
+
+.success-icon-wrap {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: rgba(34, 197, 94, 0.12);
+  color: #22c55e;
+  font-size: 2rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+  box-shadow: 0 10px 25px rgba(34, 197, 94, 0.25);
+  animation: pulse-green 2s infinite;
+}
+
+@keyframes pulse-green {
+  0% {
+    box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 12px rgba(34, 197, 94, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(34, 197, 94, 0);
+  }
+}
+
+.success-content h3 {
+  font-size: 1.5rem;
+  margin: 0;
+  font-weight: 700;
+}
+
+.success-content p {
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+  margin: 0 0 0.5rem;
+}
+
+.success-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  width: 100%;
+}
+
+.success-actions .btn {
+  width: 100%;
 }
 
 @media (max-width: 960px) {
@@ -768,6 +1004,16 @@ a:hover {
   .footer-bottom-inner {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  /* Responsive Form Styles */
+  .contact-card-form {
+    padding: 2rem 1.5rem;
+  }
+  
+  .form-group-row {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.25rem;
   }
 }
 

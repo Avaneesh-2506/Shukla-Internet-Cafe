@@ -234,13 +234,12 @@
               <article class="service-card">
                 <h3 data-i18n="service_other_title">Other Internet Cafe Services</h3>
                 <p data-i18n="service_other_body">
-                  Standard internet cafe facilities as needed for day-to-day work in the Indian
-                  market.
+                  Our center is fully equipped to handle all your day-to-day digital and administrative tasks in one convenient location. We offer high-quality printing, document scanning, photocopying, and secure lamination services to protect your important papers. Additionally, we assist with secure online payments, professional email drafting, and resume creation tailored to the local Indian market needs.
                 </p>
                 <ul>
-                  <li data-i18n="service_other_point_1">Print, scan &amp; photocopy</li>
-                  <li data-i18n="service_other_point_2">Online payments &amp; ticket booking</li>
-                  <li data-i18n="service_other_point_3">Email, resume, and document typing</li>
+                  <li data-i18n="service_other_point_1">Print, scan &amp; photocopy, lamination</li>
+                  <li data-i18n="service_other_point_2">Secure online payments</li>
+                  <li data-i18n="service_other_point_3">Email &amp; resume creation</li>
                 </ul>
                 <a
                   href="https://wa.me/919454065068?text=Hi%20Shukla%20Internet%20Cafe%2C%20I%20want%20to%20know%20about%20your%20other%20internet%20cafe%20services."
@@ -386,10 +385,88 @@
             </div>
           </div>
         </div>
+
+        <div id="contact" class="section">
+          <div class="container">
+            <h2 class="section-title" data-i18n="contact_form_title">Send a Message</h2>
+            <p class="section-subtitle" data-i18n="contact_form_subtitle">
+              Have a question or want to start a service? Fill out the form below and we'll get back to you quickly.
+            </p>
+            
+            <div class="contact-card-wrap">
+              <!-- Interactive Form Card -->
+              <div class="contact-card-form">
+                <form id="sic-contact-form" autocomplete="off">
+                  <div class="form-group-row">
+                    <div class="form-group">
+                      <label for="form-name" data-i18n="form_label_name">Full Name</label>
+                      <input type="text" id="form-name" required data-i18n-placeholder="form_placeholder_name" placeholder="Enter your full name" />
+                    </div>
+                    <div class="form-group">
+                      <label for="form-phone" data-i18n="form_label_phone">Mobile / WhatsApp Number</label>
+                      <input type="tel" id="form-phone" required data-i18n-placeholder="form_placeholder_phone" placeholder="10-digit mobile number" pattern="[0-9]{10}" />
+                    </div>
+                  </div>
+                  
+                  <div class="form-group-row">
+                    <div class="form-group">
+                      <label for="form-email" data-i18n="form_label_email">Email Address</label>
+                      <input type="email" id="form-email" data-i18n-placeholder="form_placeholder_email" placeholder="name@example.com (optional)" />
+                    </div>
+                    <div class="form-group">
+                      <label for="form-service" data-i18n="form_label_service">Service Required</label>
+                      <select id="form-service" required>
+                        <option value="" disabled selected data-i18n="form_option_select">Select a Service</option>
+                        <option value="Fresh PAN Application" data-i18n="service_pan_new_title">Fresh PAN Application</option>
+                        <option value="PAN Correction" data-i18n="service_pan_correction_title">PAN Correction / Update</option>
+                        <option value="Govt Certificates" data-i18n="service_govt_title">Govt Certificates</option>
+                        <option value="Ration Card Services" data-i18n="service_ration_title">Ration Card Services</option>
+                        <option value="Online Forms" data-i18n="service_online_title">Online Forms &amp; Applications</option>
+                        <option value="DTDC Courier" data-i18n="service_courier_title">Courier Service (DTDC Partner)</option>
+                        <option value="Other Services" data-i18n="service_other_title">Other Internet Cafe Services</option>
+                      </select>
+                    </div>
+                  </div>
+                  
+                  <div class="form-group">
+                    <label for="form-message" data-i18n="form_label_message">Your Message / Details</label>
+                    <textarea id="form-message" rows="4" required data-i18n-placeholder="form_placeholder_message" placeholder="Describe what help you need in detail..."></textarea>
+                  </div>
+                  
+                  <div class="form-submit-actions">
+                    <button type="submit" class="btn btn-primary form-submit-btn">
+                      <span data-i18n="form_btn_submit">Send Message</span>
+                    </button>
+                  </div>
+                </form>
+                
+                <!-- Success Screen Overlay -->
+                <div class="form-success-overlay" id="form-success-overlay">
+                  <div class="success-content">
+                    <div class="success-icon-wrap">✓</div>
+                    <h3 data-i18n="form_success_title">Thank you!</h3>
+                    <p data-i18n="form_success_body">Your message has been sent successfully. We will contact you soon.</p>
+                    
+                    <div class="success-actions">
+                      <a href="#" id="whatsapp-forward-btn" target="_blank" rel="noopener" class="btn btn-whatsapp">
+                        <span data-i18n="form_success_whatsapp">Send via WhatsApp</span>
+                      </a>
+                      <button type="button" class="btn btn-outline" id="form-reset-btn">
+                        Back to Form
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+            
+          </div>
+        </div>
       </section>
     </main>
 
-    <footer id="contact" class="site-footer">
+    <footer class="site-footer">
       <div class="container footer-inner">
         <div class="footer-brand">
           <div class="brand-name" data-i18n="footer_brand_name">Shukla Internet Cafe</div>
@@ -418,8 +495,8 @@
           <div class="footer-column">
             <h3 data-i18n="footer_contact_heading">Contact</h3>
             <ul>
-              <li><span>Mobile / WhatsApp:</span> +91-9454065068</li>
-              <li><span>Email:</span> shuklacafe2016@gmail.com</li>
+              <li><span>Mobile / WhatsApp:</span> <a href="https://wa.me/919454065068" target="_blank" rel="noopener">+91-9454065068</a></li>
+              <li><span>Email:</span> <a href="mailto:shuklacafe2016@gmail.com">shuklacafe2016@gmail.com</a></li>
             </ul>
           </div>
           <div class="footer-column">
@@ -448,6 +525,7 @@
       WA
     </a>
 
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script defer src="./script.js"></script>
   </body>
 </html>
